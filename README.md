@@ -43,7 +43,7 @@ Pin 7 is the "positive" side of your sensor (in this case, the door sensor (a re
 Pin 8 is the "ground" side of your sensor (in this case, the door sensor (a reed switch))  
 Pin 12 is the pin routing to your first relay to open and close it, I called this relay 1  
 Pin 14 is the pin routing to your second relay to open and close it, I called this relay 2  
-
+The image here also has pins 11 and 13, it should read 12 and 14.  
 ![image](https://user-images.githubusercontent.com/2230723/132257811-fc9be30f-31b6-4bea-927c-6256f8b86cd9.png)
 
 Power up the Raspberry Pi now if you'd like and connect your garage door button wire to the relay. I used relay 2 on accident, so everything here is for relay 2. If you don't connect this up, you'll hear the relays open and close anyway, so you'll know its working though it isn't hooked up. The wire I used, since I wanted it to be stiff, is solid core and a twisted pair. Colored, so I know which one goes where. You could probably use Ethernet cable too if you wanted and had that laying around. Bell wire works well, but also is, as of writing this, $18. https://www.lowes.com/pd/Southwire-100-ft-20-2-Twisted-Doorbell-Wire-By-the-Roll/3369292
