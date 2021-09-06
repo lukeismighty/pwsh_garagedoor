@@ -26,10 +26,10 @@ Click on your Storage you'd like to put the OS onto for the Pi and select it fro
 After that, click Write. When its all done, close the program. Pull the SD card from your computer and put it right back in. We need to add some stuff to it.
 
 Download the three files in the dependencies folder and place them on the boot partition that mounts on your computer. This is writeable from Windows, Mac, and Linux.
-The files are ssh, wpa_supplicant.conf, and getTemp.sh.
-The ssh file enables ssh at boot on the Raspberry Pi. Since this is a headless install (well, mine is), we want that on when we turn it on.
-Open the wpa_supplicant.conf file and change the name of your network to your Wi-Fi network name (case sensitive!) and put the Wi-Fi password in as well. You can see the marked lines where these need to be. Don't erase the quotation marks though, they are needed.
-The getTemp.sh file is a nice little script that lets you know the temperature of your Pi while its running. If you install this in a place that gets hot, you can run this to see how hot it is. This'll give you an idea if you are baking the thing and killing it with heat.
+The files are ssh, wpa_supplicant.conf, and getTemp.sh.  
+The ssh file enables ssh at boot on the Raspberry Pi. Since this is a headless install (well, mine is), we want that on when we turn it on.  
+Open the wpa_supplicant.conf file and change the name of your network to your Wi-Fi network name (case sensitive!) and put the Wi-Fi password in as well. You can see the marked lines where these need to be. Don't erase the quotation marks though, they are needed.  
+The getTemp.sh file is a nice little script that lets you know the temperature of your Pi while its running. If you install this in a place that gets hot, you can run this to see how hot it is. This'll give you an idea if you are baking the thing and killing it with heat.  
 
 Save your files, if you opened more than just the wpa_supplicant.conf, eject your SD card, and put the SD card into the Pi.
 
@@ -37,12 +37,12 @@ Take you wires you have for your relay or relays, the sensor for the door, and h
 
 ![image](https://user-images.githubusercontent.com/2230723/132257265-e086fa49-b0a8-408c-97f9-d1a9d3011d0f.png)
 
-Pin 4 is your power for your relay
-Pin 6 is your ground for your relay
-Pin 7 is the "positive" side of your sensor (in this case, the door sensor (a reed switch))
-Pin 8 is the "ground" side of your sensor (in this case, the door sensor (a reed switch))
-Pin 12 is the pin routing to your first relay to open and close it, I called this relay 1
-Pin 14 is the pin routing to your second relay to open and close it, I called this relay 2
+Pin 4 is your power for your relay  
+Pin 6 is your ground for your relay  
+Pin 7 is the "positive" side of your sensor (in this case, the door sensor (a reed switch))  
+Pin 8 is the "ground" side of your sensor (in this case, the door sensor (a reed switch))  
+Pin 12 is the pin routing to your first relay to open and close it, I called this relay 1  
+Pin 14 is the pin routing to your second relay to open and close it, I called this relay 2  
 
 ![image](https://user-images.githubusercontent.com/2230723/132257811-fc9be30f-31b6-4bea-927c-6256f8b86cd9.png)
 
@@ -139,13 +139,13 @@ ssh myusername@192.168.1.9
 sudo raspi-config
 ```
 
-You'll use the arrow keys, spacebar, tab, and enter to move, select, navigate, and progess through the screens.
+You'll use the arrow keys, spacebar, tab, and enter to move, select, navigate, and progess through the screens.  
 In 1. System Options, select S4 Hostname and set your hostname for your Pi to the name you want it to have, unless you like raspberrypi for some reason.
-Select Back.
-In 3. Interface Options, select P4 SPI and P5 I2C, Enable them both.
-In 5. Localisation Options, select L1 Locale, unmark the en_GB.UTF-8 UTF-8, mark the en_US.UTF-8 UTF-8, and select Ok. On the next screen Select the en_US.UTF-8 UTF-8 again.
-In 5. Localisation Options, select L2 Timezone, set it to your timezone.
-After thats set, you'll be back at the main menu, select Finish. Reboot the Raspberry Pi again.
+Select Back.  
+In 3. Interface Options, select P4 SPI and P5 I2C, Enable them both.  
+In 5. Localisation Options, select L1 Locale, unmark the en_GB.UTF-8 UTF-8, mark the en_US.UTF-8 UTF-8, and select Ok. On the next screen Select the en_US.UTF-8 UTF-8 again.  
+In 5. Localisation Options, select L2 Timezone, set it to your timezone.  
+After thats set, you'll be back at the main menu, select Finish. Reboot the Raspberry Pi again.  
 
 ```
 sudo reboot now; exit
